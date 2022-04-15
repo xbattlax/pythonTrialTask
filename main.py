@@ -1,14 +1,12 @@
 import os
 
 from flask import request, Flask, send_from_directory, after_this_request
-from azure.cognitiveservices.search.websearch import WebSearchClient
-from azure.cognitiveservices.search.websearch.models import SafeSearch
-from msrest.authentication import CognitiveServicesCredentials
 import requests
 import json
+from decouple import config
 
-subscription_key = "02ba10ef4ae441a3b0ea2a3d1e2aaeba"
-search_url = "https://api.bing.microsoft.com/v7.0/search"
+subscription_key = config("API_KEY")
+search_url = config("URL")
 
 app = Flask(__name__)
 
