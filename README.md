@@ -11,5 +11,5 @@ run in CMD
 
 ## On heroku 
 
-### Url : https://testpyup.herokuapp.com/search/<Your Research>
+### Url : https://testpyup.herokuapp.com/search/"Your Research"
  it will redirect you a json file to download. 
