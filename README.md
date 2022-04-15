@@ -8,3 +8,8 @@
  
 run in CMD
  > flask run
+
+## On heroku 
+
+### Url : https://testpyup.herokuapp.com/search/<Your Research>
+ it will redirect you a json file to download. 
