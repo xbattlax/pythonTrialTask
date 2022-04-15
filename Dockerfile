@@ -1,16 +1,17 @@
 FROM ubuntu:16.04
 
 RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+    apt-get install -y python3-pip python3-dev
 
-COPY ./requirements.txt /app/requirements.txt
+COPY ./requirement.txt /app/requirement.txt
+COPY ./.env /app/.env
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . /app
 
 ENTRYPOINT [ "python" ]
 
-CMD [ "app.py" ]
+CMD [ "wsgi.py" ]
